@@ -1,0 +1,23 @@
+﻿.log-reg-table tr td {
+    padding: 5px;
+}
+
+.log-reg-table td:nth-child(1) {
+    width: 120px;
+}
+
+.log-reg-table td:nth-child(2) {
+    width: 300px;
+}
+
+.new-fest-table tr td {
+    padding: 5px;
+}
+
+.new-fest-table td:nth-child(1) {
+    width: 150px;
+}
+
+.new-fest-table td:nth-child(2) {
+    width: 300px;
+}

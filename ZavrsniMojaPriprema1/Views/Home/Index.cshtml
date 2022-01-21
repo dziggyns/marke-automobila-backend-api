@@ -1,0 +1,134 @@
+﻿@section Scripts {
+    @Scripts.Render("~/Scripts/Skripta.js")
+    @Scripts.Render("~/Scripts/Validacija.js")
+}
+@Styles.Render("~/Content/Stil.css")
+
+<div class="row">
+
+    <div id="formRegister" class="col-sm-4 col-sm-offset-4">
+        <form method="post" action="post/" id="registracija">
+            <h2 class="text-center">Registracija</h2>
+            <table class="log-reg-table">
+                <tr>
+                    <td>Email</td>
+                    <td><input class="form-control" type="text" id="regEmail" /></td>
+                </tr>
+                <tr>
+                    <td>Lozinka</td>
+                    <td><input class="form-control" type="password" id="regLoz" /></td>
+                </tr>
+                <tr>
+                    <td>Ponovi lozinku</td>
+                    <td><input class="form-control" type="password" id="regLoz2" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" id="btnRegister1" class="btn btn-default">Registruj se</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="formLogin" class="col-sm-4 col-sm-offset-4">
+        <form method="post" action="post/" id="prijava">
+            <h2 class="text-center">Prijava</h2>
+            <table class="log-reg-table">
+                <tr>
+                    <td>Email</td>
+                    <td><input class="form-control" type="text" id="priEmail" /></td>
+                </tr>
+                <tr>
+                    <td>Lozinka</td>
+                    <td><input class="form-control" type="password" id="priLoz" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit" id="btnLogin2" class="btn btn-default">Prijava</button>
+                        <button type="submit" id="btnRegister2" class="btn btn-primary">Registracija</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div class="col-sm-12" id="odjava" style="padding-top:20px;">
+        <div class="col-sm-6">
+            <p id="info"></p>
+        </div>
+        <div class="col-sm-6 text-right">
+            <button class="btn btn-default" id="odjavise">Odjava</button>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <h2 class="text-center">Automobili</h2>
+    <p id="sadrzaj"></p>
+
+    <br />
+
+    <div id="searchDiv" style="display:none">
+        <h2 class="text-center">Pretraga Automobila</h2>
+        <form id="searchForm" class="form-group form-inline text-center">
+            <label>Minimalna Cena: </label>
+            <input id="minCena" type="number" step="0.01" class="form-control form-inline" />
+            <label>Maksimalna Cena: </label>
+            <input id="maxCena" type="number" step="0.01" class="form-control form-inline" />
+            <button id="btnSearch" class="btn btn-default">Pretraga</button>
+        </form>
+    </div>
+
+    <br />
+
+    <div id="mainFormDiv" style="display:none">
+        <h2 class="text-center">Dodavanje automobila</h2>
+        <form method="post" action="post/" id="mainForm" class="col-sm-offset-4">
+            <table class="new-fest-table">
+                <tr>
+                    <td>Model</td>
+                    <td><input class="form-control" type="text" id="Model" /></td>
+                </tr>
+                <tr>
+                    <td>Cena Automobila</td>
+                    <td><input class="form-control" type="number" step="0.01" id="cenaAutomobila" /></td>
+                </tr>
+                <tr>
+                    <td>Godina Proizvodnje</td>
+                    <td><input class="form-control" type="number" step="1" id="godinaProizvodnje" /></td>
+                </tr>
+                <tr>
+                    <td>Konjskih Snaga</td>
+                    <td><input class="form-control" type="number" step="1" id="konjskihSnaga" /></td>
+                </tr>
+                <tr>
+                    <td>Marka Automobila</td>
+                    <td><select class="form-control" id="selectMarkaId"></select></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit" class="btn btn-default">Dodavanje</button>
+                        <button type="reset" class="btn btn-danger">Odustajanje</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <br />
+
+    <div id="filterDiv" style="display:none">
+        <h2 class="text-center">Prikaz automobila po marki</h2>
+        <form id="filterForm" class="form-group form-inline text-center">
+            <label>Izaberi marku: </label>
+            <select class="form-control" id="selectFilterMarkaId"></select>
+            <button id="btnFilter" class="btn btn-default">Prikaži</button>
+        </form>
+        <p id="sadrzajFilter"></p>
+    </div>
+
+</div>
